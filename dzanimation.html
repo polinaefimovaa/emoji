@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Домашнее задание</title>
+    <style media="screen">
+      body {
+        background: #1650A6;
+      }
+      .emoji1 {
+        width: 192px;
+        height: 192px;
+        display: inline-block;
+        background: url('images/emoji1.png');
+
+      }
+      .spin {
+        animation: spin 4s infinite;
+        animation-play-state: running;
+      }
+      .emoji2 {
+        width: 192px;
+        height: 192px;
+        display: inline-block;
+        position: relative;
+        top: 0px;
+        left: 60px;
+        background: url('images/emoji2.png');
+      }
+      .heart {
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        display: block;
+        background: url('images/red.png');
+        animation: spin 4s infinite;
+      }
+      .emoji2 div:nth-of-type(1) {
+        top:126px;
+        left:10px;
+      }
+      .emoji2 div:nth-of-type(2) {
+        top:112px;
+        left:134px;
+      }
+      .emoji2 div:nth-of-type(3) {
+        top: -5px;
+        left:97px;
+      }
+      .emoji3 {
+        width: 160px;
+        height: 160px;
+        display: inline-block;
+        position: relative;
+        top: -18px;
+        left: 100px;
+        background: url('images/emoji3.png');
+        transform: scale(1.2);
+      }
+      .eye1 {
+        width: 55px;
+        height: 58px;
+        display: inline-block;
+        position: absolute;
+        top: 30px;
+        left: 24px;
+        background: url(images/eyes.png);
+        background-position: 0 0;
+        animation: eyes 1s steps(1) alternate infinite;
+      }
+      .eye2 {
+        width: 55px;
+        height: 111px;
+        display: inline-block;
+        position: absolute;
+        top: -26px;
+        left: 75px;
+        background: url(images/eyes.png);
+        background-position: 0 -160px;
+        animation: eyes1 1s steps(1) alternate infinite;
+
+      }
+      .emoji4 {
+        width: 160px;
+        height: 160px;
+        display: inline-block;
+        position: relative;
+        top: -18px;
+        left: 150px;
+        background: url('images/emoji4.png');
+        transform: scale(1.2);
+      }
+      .emoji4_arm {
+        width: 160px;
+        height: 160px;
+        display: block;
+        position: absolute;
+        top:25px;
+        left:0;
+        background: url('images/emoji4.png');
+        background-position: -160px 0;
+        animation: emoji5 1s steps(1) alternate infinite;
+      }
+      .emoji4_eyes {
+        width: 118px;
+        height: 160px;
+        display: block;
+        position: absolute;
+        top:0;
+        left:0;
+        background: url('images/emoji4.png');
+        background-position: -640px 0;
+      }
+      .emoji4:hover .emoji4_arm {
+        animation-play-state: paused;
+      }
+      .emoji5 {
+        width: 160px;
+        height: 160px;
+        display: inline-block;
+        position: relative;
+        top: 190px;
+        left: -700px;
+        background: url('images/emoji5.png');
+        transform: scale(1.2);
+      }
+      .emoji5_mouth {
+        width: 160px;
+        height: 160px;
+        display: block;
+        position: absolute;
+        top: -3px;
+        left:0;
+        background: url('images/emoji5.png');
+        background-position: -160px 0;
+        animation: arm 1s steps(1) alternate infinite;
+      }
+      .emoji5_eyes {
+        width: 118px;
+        height: 160px;
+        display: block;
+        position: absolute;
+        top:0;
+        left:0;
+        background: url('images/emoji5.png');
+        background-position: -640px 0;
+      }
+      @keyframes spin {
+        0% {transform: rotate(0deg);}
+        100% {transform: rotate(360deg);}
+      }
+      @keyframes eyes {
+        0% {background-position: 0 0}
+        50% {background-position: 55px 0}
+      }
+      @keyframes eyes1 {
+        0% {background-position: 0 -160px}
+        50% {background-position: 53px -160px}
+      }
+      @keyframes arm {
+        0% {background-position: -160px 0}
+        33% {background-position: -320px 0}
+        66% {background-position: -480px 0}
+      }
+      @keyframes emoji5 {
+        0% {background-position: -160px 0}
+        33% {background-position: -320px 0}
+        66% {background-position: -480px 0}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="emoji1 spin"></div>
+    <div class="emoji2">
+      <div class="heart"></div>
+      <div class="heart"></div>
+      <div class="heart"></div>
+    </div>
+    <div class="emoji3">
+      <div class="eye1"></div>
+      <div class="eye2"></div>
+    </div>
+    <div class="emoji4">
+      <div class="emoji4_eyes"></div>
+      <div class="emoji4_arm"></div>
+    </div>
+    <div class="emoji5">
+      <div class="emoji5_eyes"></div>
+      <div class="emoji5_mouth"></div>
+    </div>
+  </body>
+</html>
